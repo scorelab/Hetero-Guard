@@ -1,0 +1,82 @@
+{
+  "gnn": {
+    "mdns": {
+      "GCN": {
+        "num_layers": 2,
+        "num_hidden": 96
+      },
+      "HeteroSAGE": {
+        "num_layers": 4,
+        "num_hidden": 48,
+        "is_hete": true
+      },
+      "HAN": {
+        "num_hidden": 48
+      }
+    },
+    "dblp": {
+      "GCN": {
+        "num_layers": 3,
+        "num_hidden": 80
+      },
+      "HeteroSAGE": {
+        "num_layers": 6,
+        "num_hidden": 80,
+        "is_hete": true
+      },
+      "HAN": {
+        "num_hidden": 48
+      }
+    },
+    "imdb": {
+      "GCN": {
+        "num_layers": 2,
+        "num_hidden": 64
+      },
+      "HeteroSAGE": {
+        "num_layers": 4,
+        "num_hidden": 24,
+        "is_hete": true
+      },
+      "HAN": {
+        "num_hidden": 48
+      }
+    }
+  },
+  "attack": {
+    "dblp": {
+      "PRBCD": {
+        "block_size": 70000
+      },
+      "HetePRBCD": {
+        "block_size": 110000,
+        "lambda": 0.4
+      }
+    },
+    "imdb": {
+      "PGD": {},
+      "PRBCD": {
+        "block_size": 50000
+      },
+      "HetePRBCD": {
+        "block_size": 50000,
+        "lambda": 0.8
+      }
+    },
+    "mdns": {
+      "Random": {},
+      "PGD": {},
+      "PRBCD": {
+        "block_size": 50000
+      },
+      "HetePRBCD": {
+        "block_size": 50000,
+        "lambda": 0.4
+      },
+      "HANHetePRBCD": {
+        "block_size": 50000,
+        "lambda": 0.4
+      }
+    }
+  }
+}
